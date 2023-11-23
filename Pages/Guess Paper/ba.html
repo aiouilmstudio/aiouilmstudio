@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    
+</head>
+    <style>
+        .ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #4e54c8 0%, #8f94fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+ .search-box-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .search-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .back-button {
+  background-color: #02AAB0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00CDAC;
+}
+/* For smaller devices, adjust styles */
+@media only screen and (max-width: 600px) {
+    /* CSS rules for smaller screens */
+    /* Adjust layout, font sizes, margins, etc. */
+}
+
+/* For medium-sized devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* CSS rules for medium-sized screens */
+    /* Adjust layout, font sizes, margins, etc. */
+}
+
+/* For larger devices */
+@media only screen and (min-width: 1025px) {
+    /* CSS rules for larger screens */
+    /* Adjust layout, font sizes, margins, etc. */
+}
+@media only screen and (max-width: 600px) {
+    /* CSS for smaller screens */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* CSS for medium-sized screens */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* CSS for larger screens */
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="goBack()" class="back-button">Go Back</button>
+
+
+<div class="heading1">
+        <h1 class="">AIOU ILM STUDIO</h1>     
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <div class="logo">
+                <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+            </div>
+            <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#">Online Admission</a></li>
+            <li>
+                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                <ul class="dropdown"> <!-- Dropdown Content -->
+                    <li><a href="#">Solved Assignments</a></li>  </ul>
+                    <li><a href="/Pages/Guess Paper/ba.html">Guess Paper</a></li>
+                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                    <li><a href="/Pages/Soft Books/softbooks.html">Soft Books</a></li>
+                    <li><a href="#">Past Paper</a></li>
+              
+            </li>
+        </ul>
+        
+        <div class="right-nav">
+            <input type="text" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main class="container">
+        <section class="blog-content">
+            <div class="extreme-container">
+
+<article>
+                    <h2 class="articles-h2">AIOU BA/AD Guess Paper 2023</h2>
+                    <p>Assalam-O-Aliakum! Here is Complete List of All Programmes Offered by Allama Iqbal Open University and Their Guess Paper. At This Page You Can Get Allama Iqbal Open University, Islamabad Matric Class Guess .   
+                        Here You Can Download AIOU Matric Guess Paper 2023 for Free. 
+                        So keep Visiting and Download AIOU Matric Guess Paper 2023.
+                    </p>
+
+
+
+
+<div class="AIOU BA/AD Guess Paper 2023">
+  <table>
+<tbody>
+  <tr>
+    <th>Code</th>
+    <th>Book Name</th>
+    <th>Download</th>
+    <th>Remarks</th>
+   
+  </tr>
+  
+ <tr   1;">
+  <td  >
+  <p  >402</span></p>
+  </td>
+  <td  >
+  <p  >Economics (Urdu)</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1iMHf-2MjUCFOoHHJGuT666ZKeEoObPQi/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   2;">
+  <td  >
+  <p  >404</span></p>
+  </td>
+  <td  >
+  <p  >Urdu</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1OU2wPrsmA8uPB4lM3puLKRwIcB_LQ6nW/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   3;">
+  <td  >
+  <p  >405</span></p>
+  </td>
+  <td  >
+  <p  >Iqbaliat</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1j_tmEop_3ybAs5QAVcoPrBg4_ZZ_faiX/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   4;">
+  <td  >
+  <p  >406</span></p>
+  </td>
+  <td  >
+  <p  >Economics of Pakistan</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1AD9lpq2MThT1Vva9esIKrXIzfOVThpAG/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   5;">
+  <td  >
+  <p  >407</span></p>
+  </td>
+  <td  >
+  <p  >Modern Muslim World</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1TQ1Sz25vIpXKqat7KwhSMa4Tmi0pXKcr/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   6;">
+  <td  >
+  <p  >408</span></p>
+  </td>
+  <td  >
+  <p  >Arabic</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   7;">
+  <td  >
+  <p  >409</span></p>
+  </td>
+  <td  >
+  <p  >Commercial Geography</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1lUIisb-XkEsZuY3n2IJMnAGyvI3KikFv/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   8;">
+  <td  >
+  <p  >411</span></p>
+  </td>
+  <td  >
+  <p  >Sociology – I</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/18wsy43wIalN3ULiSOyNgWfc77vu2OW1L/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   9;">
+  <td  >
+  <p  >412</span></p>
+  </td>
+  <td  >
+  <p  >Social &amp; Cultural Anthropology</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1yISgDrUr0d4U6T2G9tUm28vWx6dSl7S9/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   10;">
+  <td  >
+  <p  >413</span></p>
+  </td>
+  <td  >
+  <p  >Sociology – II</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1hGSInFNy2nwYcyoNR6iyF_o96Gf-mn6q/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   11;">
+  <td  >
+  <p  >414</span></p>
+  </td>
+  <td  >
+  <p  >Demography</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1U21Zb2h4xNo8unfsay3dzn5U9ieZ_-Su/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   12;">
+  <td  >
+  <p  >416</span></p>
+  </td>
+  <td  >
+  <p  >Islamiat</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/133841NsPaqnzGZKqmb_24b_lG44JKj2i/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   13;">
+  <td  >
+  <p  >417</span></p>
+  </td>
+  <td  >
+  <p  >Pakistan Studies</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1duHbh0TF4_2Ks8bd_IVHAUtEtbSyyMkd/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   14;">
+  <td  >
+  <p  >419</span></p>
+  </td>
+  <td  >
+  <p  >Education</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   15;">
+  <td  >
+  <p  >422</span></p>
+  </td>
+  <td  >
+  <p  >Organizing Library Resources</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1ZHhGklijyrgQGAGzUB8fRsW9i0q0Ojv4/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   16;">
+  <td  >
+  <p  >423</span></p>
+  </td>
+  <td  >
+  <p  >Library Services</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1jXM6Ohs3A6_evZSOQmZe5CDmyv0b-JMV/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   17;">
+  <td  >
+  <p  >426</span></p>
+  </td>
+  <td  >
+  <p  >Pakistani Adab – II</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   18;">
+  <td  >
+  <p  >427</span></p>
+  </td>
+  <td  >
+  <p  >Pakistani Adab – I</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   19;">
+  <td  >
+  <p  >429</span></p>
+  </td>
+  <td  >
+  <p  >Mass Education / Literacy</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1_NH_GeEvE-3_1QY9IbiRHlArrAnrCkar/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   20;">
+  <td  >
+  <p  >430</span></p>
+  </td>
+  <td  >
+  <p  >Principles of Journalism</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/11-0g9GoGD08wrRt9bRLOzli9j7a_oxx9/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   21;">
+  <td  >
+  <p  >431</span></p>
+  </td>
+  <td  >
+  <p  >Reporting</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1EbvCl7k35PQi0jJk-WMD6FGCSYhGime-/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   22;">
+  <td  >
+  <p  >436</span></p>
+  </td>
+  <td  >
+  <p  >Seerat-e-Tayyaba</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1qnPiNirpWJSaLE1BgeP1hs94EyrqzMcW/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   23;">
+  <td  >
+  <p  >437</span></p>
+  </td>
+  <td  >
+  <p  >Islamiat Elective</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1RlGhzw4IhbpQB1e53J3NF8zsmHlVksM4/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   24;">
+  <td  >
+  <p  >438</span></p>
+  </td>
+  <td  >
+  <p  >Principles of Accounting</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   25;">
+  <td  >
+  <p  >444</span></p>
+  </td>
+  <td  >
+  <p  >Advance Accounting</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1gnDRGP2MDF9bFi5AR_j-ZEk0IRnIvQPe/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   26;">
+  <td  >
+  <p  >449</span></p>
+  </td>
+  <td  >
+  <p  >Magazine Journalism</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1sEeWu_w1AmPxVRR4AQA5r8pSseb3bkqF/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   27;">
+  <td  >
+  <p  >451</span></p>
+  </td>
+  <td  >
+  <p  >Public Relations</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1Jelza_FsaAEnePArSgMVezF813eypQ8n/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   28;">
+  <td  >
+  <p  >452</span></p>
+  </td>
+  <td  >
+  <p  >Mass Communication</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1jR0UUZnANHa7xr5CY7ZoOMBhL_lB-J4Q/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   29;">
+  <td  >
+  <p  >453</span></p>
+  </td>
+  <td  >
+  <p  >Radio Broadcasting</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1tKERtObRthoGWrhSrMao9fWIyvLzjfoK/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   30;">
+  <td  >
+  <p  >454</span></p>
+  </td>
+  <td  >
+  <p  >TV Broadcasting</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1HntXNraN8YySpEYpwI3J9Ocbo7kfDQEB/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   31;">
+  <td  >
+  <p  >455</span></p>
+  </td>
+  <td  >
+  <p  >Book Editing</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1F5nxyBuHdKY466KLP1jYb8vVipSAIJwY/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   32;">
+  <td  >
+  <p  >456</span></p>
+  </td>
+  <td  >
+  <p  >Taxation</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   33;">
+  <td  >
+  <p  >458</span></p>
+  </td>
+  <td  >
+  <p  >Community Development</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/12a6LoskE8GjOfR71YjQfqjE7c-gkdYxO/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   34;">
+  <td  >
+  <p  >460</span></p>
+  </td>
+  <td  >
+  <p  >Mercantile Law</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1wev0KeOFDDAOiVyjtXsaWLt4VmtAzISa/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   35;">
+  <td  >
+  <p  >461</span></p>
+  </td>
+  <td  >
+  <p  >Advertising</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1RkybGG4eMEaE2t3geQvUOpG_pZRL3bMo/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   36;">
+  <td  >
+  <p  >462</span></p>
+  </td>
+  <td  >
+  <p  >Cost Accounting</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   37;">
+  <td  >
+  <p  >463</span></p>
+  </td>
+  <td  >
+  <p  >Fundamentals of Business</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   38;">
+  <td  >
+  <p  >464</span></p>
+  </td>
+  <td  >
+  <p  >Islamic Fiqh</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1E_sGcTFFmpoB5fBan5AJsUQhX35thfAT/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   39;">
+  <td  >
+  <p  >466</span></p>
+  </td>
+  <td  >
+  <p  >History of Libraries with Reference to Pakistan</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1n5TDZAwzk3uQG2mGG_xG0IcaCWsBnbkz/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   40;">
+  <td  >
+  <p  >467</span></p>
+  </td>
+  <td  >
+  <p  >Classification and Cataloguing</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1twhK4s2fGXZu851FXFjwsYEXvLtvm-JP/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   41;">
+  <td  >
+  <p  >472</span></p>
+  </td>
+  <td  >
+  <p  >Quran-E-Hakim</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1_R6F3A2hwZpyudzR9hijkjeGHOoHSEa0/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   42;">
+  <td  >
+  <p  >473</span></p>
+  </td>
+  <td  >
+  <p  >Hadith</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1PA6FRKawJqUdDndPoLJp_qtUH2oR56ay/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   43;">
+  <td  >
+  <p  >481</span></p>
+  </td>
+  <td  >
+  <p  >Auditing</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   44;">
+  <td  >
+  <p  >482</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1ImY2rSEqXdcFAwaaQuKYNauqahoGxDlq/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   45;">
+  <td  >
+  <p  >484</span></p>
+  </td>
+  <td  >
+  <p  >Food &amp; Nutrition</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1yPf3A5UJDpFjvN83SaMTDqb_hmEaqiON/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   46;">
+  <td  >
+  <p  >485</span></p>
+  </td>
+  <td  >
+  <p  >Health &amp; Nutrition</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1k9dLMwKDWKg_AOuGBcX2V-odiMyDZ8eC/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   47;">
+  <td  >
+  <p  >487</span></p>
+  </td>
+  <td  >
+  <p  >Child Development</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1xR0P9xCixbViLfxql6es_1sP28r41c77/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   48;">
+  <td  >
+  <p  >1413</span></p>
+  </td>
+  <td  >
+  <p  >Financial Accounting</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >-</span></p>
+  </td>
+ </tr>
+ <tr   49;">
+  <td  >
+  <p  >1414</span></p>
+  </td>
+  <td  >
+  <p  >Fundamental of Money and Banking</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1QBq1n-zczNdEW26njseS42HMPzXgJ2bh/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   50;">
+  <td  >
+  <p  >1416</span></p>
+  </td>
+  <td  >
+  <p  >Business Communication</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >-</span></p>
+  </td>
+ </tr>
+ <tr   51;">
+  <td  >
+  <p  >1421</span></p>
+  </td>
+  <td  >
+  <p  >Introduction to Environment (Eng)</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1SSbU6drVwV3JPHnrzp-Ue8y1Ejwu_j6h/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   52;">
+  <td  >
+  <p  >1421</span></p>
+  </td>
+  <td  >
+  <p  >Introduction to Environment (Urdu)</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1dnaf2GuSrt-vfH3q69ldb_ltdCwT0Vv_/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   53;">
+  <td  >
+  <p  >1423</span></p>
+  </td>
+  <td  >
+  <p  >English – I (Guess + Notes)</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   54;">
+  <td  >
+  <p  >1424</span></p>
+  </td>
+  <td  >
+  <p  >English – II</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   55;">
+  <td  >
+  <p  >1429</span></p>
+  </td>
+  <td  >
+  <p  >Business Mathematics</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   56;">
+  <td  >
+  <p  >1428</span></p>
+  </td>
+  <td  >
+  <p  >Commercial Geography</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >-</span></p>
+  </td>
+ </tr>
+ <tr   57;">
+  <td  >
+  <p  >1430</span></p>
+  </td>
+  <td  >
+  <p  >Business Statistics</span></p>
+  </td>
+  <td  >
+  <p  >&nbsp;</span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   58;">
+  <td  >
+  <p  >1431</span></p>
+  </td>
+  <td  >
+  <p  >Basics of ICT (Urdu)</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1LqETdS2Cx83Olu0qX35wrkbvaNdUYKCQ/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+ <tr   59; mso-yfti-lastrow: yes;">
+  <td  >
+  <p  >1431</span></p>
+  </td>
+  <td  >
+  <p  >Basics of ICT (English)</span></p>
+  </td>
+  <td  >
+  <p  ><a href="https://drive.google.com/file/d/1RkJax4H9fEqKhHPsONbWTMrU8CwNL5sG/view?usp=sharing">PDF</a></span></p>
+  </td>
+  <td  >
+  <p  >Available</span></p>
+  </td>
+ </tr>
+</tbody>
+  
+  </table>
+</div>
+</article>
+<div>
+</section>
+ <aside class="ads-widgets">
+            <!-- Right Section Content (Ads and Widgets) -->
+            <div class="ad">
+                <!-- Example Ad Content -->
+                Ad Content Here
+            </div>
+            <!-- Add more ads or widgets -->
+            <div class="widget">
+                <!-- Example Widget Content -->
+                Widget Content Here
+            </div>
+            <!-- Add more widgets -->
+        </aside>
+    </main>
+ <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+    </footer>
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+// JavaScript functionality here
+        document.querySelector('.btn').addEventListener('click', function() {
+            let searchInput = document.getElementById('search').value;
+            console.log('Searching for: ' + searchInput);
+            // Perform other search-related actions here
+        });
+</script>
+
+</body>
+</html>

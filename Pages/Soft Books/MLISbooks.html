@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+<meta name="description" content="Download AIOU BA Soft Books in PDF format for free. Access course materials and study resources for Allama Iqbal Open University's Bachelor of Arts program.">
+<meta name="keywords" content="AIOU, BA, Soft Books, PDF, Allama Iqbal Open University, Bachelor of Arts, study materials">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    
+</head>
+    <style>
+        .ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    border-radius: 10px;
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+text-align: center;
+color: white;}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.search-container {
+            width: 300px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .search-input-table {
+            width: 100%;
+            padding: 10px;
+            border-radius: 25px;
+            border: 2px solid #02AAB0;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-input-table:focus {
+            border-color: #00CDAC;
+        }
+
+        .search-button-table {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10px 15px;
+            border: none;
+            background-color: #02AAB0;
+            color: white;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-button-table:hover {
+            background-color: #00CDAC;
+        }
+
+        .search-icon-table {
+            font-size: 18px;
+            vertical-align: middle;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="heading1">
+        <h1 class="">AIOU ILM STUDIO</h1>     
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <div class="logo">
+                <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+            </div>
+            <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#">Online Admission</a></li>
+            <li>
+                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                <ul class="dropdown"> <!-- Dropdown Content -->
+                    <li><a href="#">Solved Assignments</a></li>
+                    <li><a href="/Pages/Guess Paper/">Guess Paper</a></li>
+                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                    <li><a href="/Pages/Soft Books/softbooks.html">Soft Books</a></li>
+                    <li><a href="#">Past Paper</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="right-nav">
+            <input type="text" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main class="container">
+        <section class="blog-content">
+            <div class="extreme-container">
+
+<article>
+                    <h2 class="articles-h2">AIOU MLIS Download PDF Books - AIOU Original Books</h2><br>
+                     <p>Assalam-o-Aliakum! At this page you can get Allama Iqbal Open University, Islamabad MA Library & Information Sciences Original PDF Books. You can Download Original PDF Books from the available link at down below.</p>
+        <p>We Provides MA Library & Information Sciences Class Original PDF Books that is Available for Download. </p>
+
+        
+
+        <div class="search-container">
+            <input type="text" id="searchInputTable" class="search-input-table" placeholder="Search...">
+            <button onclick="searchTable()" class="search-button-table">
+                <span class="search-icon-table">🔍</span>
+            </button>
+        </div>
+    
+    
+     <table>
+        
+            <tr>
+                <th>Code</th>
+                <th>Book Name</th>
+                <th>Original</th>
+                <th>Download</th>
+            </tr>
+            <tr>
+                <td>5500</td>
+                <td>Foundation Of Librarianship</td>
+                <td><a href="https://drive.google.com/open?id=1DBpuhJ9okQh3Ref6Qqmk3i-qe-lWDem2">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1DBpuhJ9okQh3Ref6Qqmk3i-qe-lWDem2" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5501</td>
+                <td>Introduction To Library & Information Sciences</td>
+                <td><a href="https://drive.google.com/open?id=1m2ufh7yB5jHGMiXi3Wy65YHWZ2cz6_2U">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1m2ufh7yB5jHGMiXi3Wy65YHWZ2cz6_2U" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5502</td>
+                <td>Inform. Sources & Services</td>
+                <td><a href="https://drive.google.com/open?id=1vPWMnb67usywrFik7AGkEBJ3arNJJn8Z">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1vPWMnb67usywrFik7AGkEBJ3arNJJn8Z" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5503</td>
+                <td>Classification : Theory & Practice</td>
+                <td><a href="https://drive.google.com/open?id=1qeds7FrcOzIRxy10YlQBc2QAe6iDc9Sf">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1qeds7FrcOzIRxy10YlQBc2QAe6iDc9Sf" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5504</td>
+                <td>Cataloguing : Theory & Practice</td>
+                <td><a href="https://drive.google.com/open?id=1YGhdZ85I2hz8Vyqah3wwzOTb35-F6DxM">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1YGhdZ85I2hz8Vyqah3wwzOTb35-F6DxM" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5641</td>
+                <td>Management Of Libraries & Information Centres-I</td>
+                <td><a href="https://drive.google.com/open?id=1Pet0rs3XhC8dxIgeF7d-rpAzXtUewGJK">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1Pet0rs3XhC8dxIgeF7d-rpAzXtUewGJK" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5642</td>
+                <td>Management Of Libraries & Information Centres-II</td>
+                <td><a href="https://drive.google.com/open?id=1RyHP039n51E7ed7sChUt3eB0Yxb7f61b">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1RyHP039n51E7ed7sChUt3eB0Yxb7f61b" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5643</td>
+                <td>Library Automation : Information Storage & Retrieval-I</td>
+                <td><a href="https://drive.google.com/open?id=1FvVcrs_Z4k38kwFGburRhFNjwL57m10n">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1FvVcrs_Z4k38kwFGburRhFNjwL57m10n" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5644</td>
+                <td>Library Automation : Information Storage & Retrieval-II</td>
+                <td><a href="https://drive.google.com/open?id=1_mchv5zl6sZ6FlWjDz1hPTgEf7sf8W5F">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1_mchv5zl6sZ6FlWjDz1hPTgEf7sf8W5F" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5645</td>
+                <td>Resource Sharing & Networking-I</td>
+                <td><a href="https://drive.google.com/open?id=1Tgq6sqcIFNe3xKOF7ILmydbs-FVsdpYK">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1Tgq6sqcIFNe3xKOF7ILmydbs-FVsdpYK" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5646</td>
+                <td>Resource Sharing & Networking-II</td>
+                <td><a href="https://drive.google.com/open?id=1vlQv6QypYNqGOAXcXeiJgSgOovlCx8g-">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1vlQv6QypYNqGOAXcXeiJgSgOovlCx8g-" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5647</td>
+                <td>Advanced Technical Operations-I</td>
+                <td><a href="https://drive.google.com/open?id=10JBUgSQZ5Obr3LvMRgKYRddbs_0uUL-m">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=10JBUgSQZ5Obr3LvMRgKYRddbs_0uUL-m" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5648</td>
+                <td>Advanced Technical Operations-II</td>
+                <td><a href="https://drive.google.com/open?id=1EguzTxhvwYz_930lb1ETden6Xjc2Aek3">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1EguzTxhvwYz_930lb1ETden6Xjc2Aek3" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5649</td>
+                <td>Research Methods & Techniques For Librarians-I</td>
+                <td><a href="https://drive.google.com/open?id=15OTNMqHIKS4bBNFyQV9FLaZwYY3KE622">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=15OTNMqHIKS4bBNFyQV9FLaZwYY3KE622" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5650</td>
+                <td>Research Methods & Techniques For Librarians-II</td>
+                <td><a href="https://drive.google.com/open?id=1-a2hrllGcrzB1UFbPE-xUbqI62EsVOCM">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1-a2hrllGcrzB1UFbPE-xUbqI62EsVOCM" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5651</td>
+                <td>Public Records Rare Material & Their Conservation-I</td>
+                <td><a href="https://drive.google.com/open?id=1CLTJn6ZYWgF8TJJY_cEisbdc-0ySV-yN">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1CLTJn6ZYWgF8TJJY_cEisbdc-0ySV-yN" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5652</td>
+                <td>Public Records Rare Material & Their Conservation-II</td>
+                <td><a href="https://drive.google.com/open?id=1yIqxOlaGmI00Oe5zG1tsY097qsck0Ywz">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1yIqxOlaGmI00Oe5zG1tsY097qsck0Ywz" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5653</td>
+                <td>Management Of Serial Publications-I</td>
+                <td><a href="https://drive.google.com/open?id=17z2swN5ymX2l7hQvW2A-xsAcdZZ2cgti">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=17z2swN5ymX2l7hQvW2A-xsAcdZZ2cgti" class="download-icon">Download</a></td>
+            </tr>
+            <tr>
+                <td>5654</td>
+                <td>Management Of Serial Publication-II</td>
+                <td><a href="https://drive.google.com/open?id=1NJIWg7QduaFHT7QoUrPNrusyGYXEuvvh">PDF</a></td>
+                <td><a href="https://drive.google.com/open?id=1NJIWg7QduaFHT7QoUrPNrusyGYXEuvvh" class="download-icon">Download</a></td>
+            </tr>
+        </table>
+</div>
+</article>
+<div>
+</section>
+ <aside class="ads-widgets">
+            <!-- Right Section Content (Ads and Widgets) -->
+            <div class="ad">
+                <!-- Example Ad Content -->
+                Ad Content Here
+            </div>
+            <!-- Add more ads or widgets -->
+            <div class="widget">
+                <!-- Example Widget Content -->
+                Widget Content Here
+            </div>
+            <!-- Add more widgets -->
+        </aside>
+    </main>
+ <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+    </footer>
+    <script>
+        function searchTable() {
+            const input = document.getElementById('searchInputTable');
+            const filter = input.value.toUpperCase();
+            const table = document.querySelector('table');
+            const rows = table.getElementsByTagName('tr');
+    
+            for (let i = 1; i < rows.length; i++) { // Start loop from 1 to skip header row (th)
+                const cells = rows[i].getElementsByTagName('td');
+                let found = false;
+                for (let j = 0; j < cells.length; j++) {
+                    const cell = cells[j];
+                    if (cell) {
+                        const textValue = cell.textContent || cell.innerText;
+                        if (textValue.toUpperCase().indexOf(filter) > -1) {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+                if (found) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    
+
+</body>
+</html>

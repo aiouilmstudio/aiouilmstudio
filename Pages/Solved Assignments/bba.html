@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    
+</head>
+    <style>
+        .ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #4e54c8 0%, #8f94fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+ .search-box-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .search-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="heading1">
+        <h1 class="">AIOU ILM STUDIO</h1>     
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <div class="logo">
+                <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+            </div>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#">Online Admission</a></li>
+            <li>
+                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                <ul class="dropdown"> <!-- Dropdown Content -->
+                    <li><a href="#">Solved Assignments</a></li></ul>
+                    <li><a href="#">Guess Paper</a></li>
+                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                    <li><a href="#">Soft Books</a></li>
+                    <li><a href="#">Past Paper</a></li>
+                
+            </li>
+        </ul>
+        <div class="right-nav">
+            <input type="text" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main class="container">
+        <section class="blog-content">
+            <div class="extreme-container">
+
+<article>
+                    <h2 class="articles-h2">BBA Solved Assignments Spring 2023</h2>
+                    <p>Here is Complete List of All Programmes Offered by Allama Iqbal Open University and Their Solved Assignments for Semester Autumn 2023. 
+                        Here You Can Download AIOU Solved Assignments for Autumn 2023 for Free. 
+                        So keep Visiting and Download Solved Assignments of AIOU Autumn 2023.
+                    </p>
+
+
+
+<div class="BBA Solved Assignments Spring 2023">
+  <table>
+    <body>
+<br>
+   <div class="search-box-container">
+        <input type="text" class="search-box" id="searchBox" placeholder="Search Course Code">
+        <div class="search-icon" id="searchButton">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqweHDmNZqwg6lp0Wql8g7vLlLg5JdFBNan0FrrM46KA" alt="Search">
+        </div>
+    </div>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Book Name</th>
+            <th>Assignments</th>
+        </tr>
+    </thead>
+  
+  </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8401</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Principles of Accounting</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/principles-of-accounting-code-8401-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8402</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Fundamentals of Business</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/fundamentals-of-business-code-8402-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8403</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Fundamental of Computers</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/fundamental-of-computers-code-8403-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8404</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Advanced Accounting</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/advanced-accounting-code-8404-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8405</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Applied Math For Business &amp; Social Science</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/applied-math-for-business-social-science-code-8405-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8406</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Micro Economics</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/micro-economics-code-8406-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8407</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Principles of Marketing</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8408</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Cost Accounting</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/cost-accounting-code-8408-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8409</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Statistics For Management</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/statistics-for-management-code-8409-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8410</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Business Communications</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/business-communications-code-8410-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8411</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Introduction To Psychology</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/introduction-to-psychology-code-8411-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8412</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Macro Economics</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8413</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Introduction To Logic</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8414</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Introduction To Business Finance</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="/introduction-to-business-finance-code-8414-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8415</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Business Communication-II</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8416</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Pre-Calculus</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8418</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Production and Operations Management</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8419</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Management Theory and Practice</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8420</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Business Ethics</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 49px;"> <td style="height: 49px; width: 11%;"><strong><span style="font-family: arial;">8421</span></strong></td> <td style="height: 49px; width: 56.375%;"><strong>Business and Labor Laws</strong></td> <td style="height: 49px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8423</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Marketing Management</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8427</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Organizational Behavior</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8428</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Consumer Behavior</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8429</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Management Information Systems</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8430</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Project Management</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8431</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Business Research Methods</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 11%;"><strong><span style="font-family: arial;">8432</span></strong></td> <td style="height: 48px; width: 56.375%;"><strong>Economy of Pakistan</strong></td> <td style="height: 48px; width: 32.375%;"><strong><a href="#">Waiting for Assignments</a></strong></td> </tr> </tbody>
+</table>
+</div>
+</article>
+<div>
+</section>
+ <aside class="ads-widgets">
+            <!-- Right Section Content (Ads and Widgets) -->
+            <div class="ad">
+                <!-- Example Ad Content -->
+                Ad Content Here
+            </div>
+            <!-- Add more ads or widgets -->
+            <div class="widget">
+                <!-- Example Widget Content -->
+                Widget Content Here
+            </div>
+            <!-- Add more widgets -->
+        </aside>
+    </main>
+ <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+    </footer>
+<script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+            let searchValue = document.getElementById('searchBox').value.toLowerCase();
+            let rows = document.querySelectorAll('table tbody tr');
+
+            rows.forEach(row => {
+                let data = row.innerText.toLowerCase();
+                if (data.includes(searchValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

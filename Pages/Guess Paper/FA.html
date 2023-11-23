@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    
+</head>
+    <style>
+        .ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #4e54c8 0%, #8f94fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+ .search-box-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .search-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="heading1">
+        <h1 class="">AIOU ILM STUDIO</h1>     
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <div class="logo">
+            <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+        </div>
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#">Online Admission</a></li>
+        <li>
+            <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+            <ul class="dropdown"> <!-- Dropdown Content -->
+                <li><a href="#">Solved Assignments</a></li>  </ul>
+                <li><a href="/Pages/Guess Paper/ba.html">Guess Paper</a></li>
+                <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                <li><a href="/Pages/Soft Books/softbooks.html">Soft Books</a></li>
+                <li><a href="#">Past Paper</a></li>
+          
+        </li>
+    </ul>
+    
+        <div class="right-nav">
+            <input type="text" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main class="container">
+        <section class="blog-content">
+            <div class="extreme-container">
+
+<article>
+                    <h2 class="articles-h2">AIOU FA + ICOM Guess Paper</h2>
+                    <p>Assalam-O-Aliakum! Here is Complete List of All Programmes Offered by Allama Iqbal Open University and Their Guess Paper. At This Page You Can Get Allama Iqbal Open University, Islamabad Matric Class Guess .   
+                        Here You Can Download AIOU Matric Guess Paper 2023 for Free. 
+                        So keep Visiting and Download AIOU Matric Guess Paper 2023.
+                    </p>
+
+
+
+
+<div class="AIOU FA + ICOM Guess Paper">
+  <table>
+<tbody>
+  <br>
+  <h1> <li>6 Credit Hours / Full Book Guess Paper</li> </h1>
+  
+  <tr>
+    <th>Code</th>
+    <th>Book Name</th>
+    <th>Download</th>
+   
+  </tr>
+  <tr>
+    <td>303</td>
+    <td>Iqbaliat</td>
+    <td><a href="https://drive.google.com/file/d/1gDwjwp-JNrbMeQgpEZNUpOnyYCluLMi8/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+  <tr>
+    <td>308</td>
+    <td>General Science</td>
+    <td><a href="https://drive.google.com/file/d/14N5EiB2einvr6tTJtXOSWGMy9ks_3u41/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+  <tr>
+    <td>309</td>
+    <td>Arabic</td>
+    <td><a href="https://drive.google.com/file/d/1hiHOw5osi_bYS9a84Iv0arHdM3Y_TtlG/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+  <tr>
+    <td>311</td>
+    <td>Book Keeping and Accounting</td>
+    <td>Wait</td>
+   
+  </tr>
+  <tr>
+    <td>312</td>
+    <td>Education</td>
+    <td><a href="https://drive.google.com/file/d/1VH92gNl6sR-DcxhdX8mm0dBpaPXqEzka/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>315</td>
+    <td>Economics</td>
+    <td><a href="https://drive.google.com/file/d/1aXWQ9woYLDBr-qW4qTgLZp4RDmG3MErI/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>321</td>
+    <td>Muslim History of Sub-Continent</td>
+    <td><a href="https://drive.google.com/file/d/1HsJ2y0jJySGrtrh4CpnYtnRnkbJfV14J/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+  <tr>
+    <td>343</td>
+    <td>Islamiat Elective</td>
+    <td><a href="https://drive.google.com/file/d/1wbwRC2Dz7jRgIKCUG0O_OsRWjLkQ3v3e/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>346</td>
+    <td>Principles of Commerce</td>
+    <td><a href="https://drive.google.com/file/d/1Sz1c4DP3wDzDn9JQFV4xHZ6r_diUSZkE/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>371</td>
+    <td>Women Policing</td>
+    <td><a href="https://drive.google.com/file/d/1BQqa0ib7p29u_EGgYRZb3QJ59NgA7n4f/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+  <tr>
+    <td>372</td>
+    <td>Criminology</td>
+    <td><a href="https://drive.google.com/file/d/14i_pi5mtBkc-o2Ilxf124XPYW1RKW-IH/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>376</td>
+    <td>Human Rights</td>
+    <td><a href="https://drive.google.com/file/d/1hXgfWwqxR5iZ_WB8LQitRlRdpt15UnYI/view?usp=sharing">PDF</a></td>
+    
+  </tr>
+  <tr>
+    <td>388</td>
+    <td>Penology</td>
+    <td><a href="https://drive.google.com/file/d/16BUSb_ur04SuERIg_JD5e8iPD1vWVQUW/view?usp=sharing">PDF</a></td>
+   
+  </tr>
+</tbody>
+ 
+  </Table>
+  
+ <br>
+  <table>
+    <h1> <li>3 Credit Hours / Full Book Guess Paper</li> </h1>
+  <tr>
+    
+    <th> 3 Credit Hours</th>
+    <th>Book Name</th>
+    <th>Download</th>
+   
+  </tr>
+    <tr>
+  <td>305</td>
+  <td>Rural Development</td>
+  <td><a href="https://drive.google.com/file/d/1DKeP7Gdpn1qplvxWUq327eon0S2BsoVn/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>313</td>
+  <td>Dairy Farming</td>
+  <td><a href="https://drive.google.com/file/d/1WjnK-qHR3QK-0gkO2lhTcgm6pZ4DK0N0/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>316</td>
+  <td>Islamiat</td>
+  <td><a href="https://drive.google.com/file/d/1qpQ7L2u5zVvDd4_GtiB-SMUB8UUOCOzY/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>317</td>
+  <td>Pakistan Studies</td>
+  <td><a href="https://drive.google.com/file/d/14FP7WbEESNCap8ZhbeXdCo9Yq0qWuYsz/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>322</td>
+  <td>Secretarial Practice</td>
+  <td><a href="https://drive.google.com/file/d/18rJDycIT3wjrOB41BXvRwr6f8qlUt_D0/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>326</td>
+  <td>Farm Income Generating Skills</td>
+  <td><a href="https://drive.google.com/file/d/1ETiMF3c2l3CWHbNtYJ_csI5eKhWt9SoC/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>327</td>
+  <td>Farm Machinery</td>
+  <td><a href="https://drive.google.com/file/d/11KVJP459UM6JqnFIfh2z69KW8R-I-cSE/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>329</td>
+  <td>Jadeed Zarat</td>
+  <td><a href="https://drive.google.com/file/d/1GyRrqMoXsG4bOXDxWHEQ5toYDqRfDY2_/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>330</td>
+  <td>Child Care & Development</td>
+  <td><a href="https://drive.google.com/file/d/1Jzztbns0cz8lMZlVfTS7xDu_davB34Xb/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>342</td>
+  <td>Improved Methods of Fruit Production</td>
+  <td><a href="https://drive.google.com/file/d/1nZ_Rih-v9mosIl3qt0jAomRWzpsDnT3N/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>345</td>
+  <td>Home Management & Home Furnishing</td>
+  <td><a href="https://drive.google.com/file/d/1N4upi-oQhrf6AWS5AvxAqnR87e9edzLI/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>347</td>
+  <td>Banking</td>
+  <td><a href="https://drive.google.com/file/d/1aeJ6xWe4qMTcv1XzML2o4f0P-j18kOUd/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>349</td>
+  <td>Plant Protection</td>
+  <td>Wait</td>
+ 
+</tr>
+<tr>
+  <td>356</td>
+  <td>Food & Nutrition</td>
+  <td><a href="https://drive.google.com/file/d/1Het7pR0t-QaHbZsRADrQgw1-K_2ZBjue/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>357</td>
+  <td>Health & Nutrition</td>
+  <td><a href="https://drive.google.com/file/d/1ED1ZJAi0bU5oRUzTW5Gnx5u5EVulQdM7/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>358</td>
+  <td>Apparel Design</td>
+  <td>Wait</td>
+ 
+</tr>
+<tr>
+  <td>360</td>
+  <td>IT Applications</td>
+  <td><a href="https://drive.google.com/file/d/1g2bpyllYYN7MbU3PlbbUBn1v7Xh3uWOK/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>363</td>
+  <td>Urdu – I</td>
+  <td><a href="https://drive.google.com/file/d/1ShMlVP-3uAwb0_YFxtjDj3M8FqTW2lzl/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>364</td>
+  <td>Urdu – II</td>
+  <td><a href="https://drive.google.com/file/d/1G-jLnCBX2Avq3TTfl5XKRDSGDJylzKkK/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>366</td>
+  <td>Action for Health</td>
+  <td><a href="https://drive.google.com/file/d/1S5ByBaD62h_7lK8YtArYrf8lt7CjYNys/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>386</td>
+  <td>English – I (Guess + Notes)</td>
+  <td><a href="https://drive.google.com/file/d/1emwwBhNoH-eEvvORyyyD2umMNKzq3MJU/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>387</td>
+  <td>English – II (Guess + Notes)</td>
+  <td><a href="https://drive.google.com/file/d/1daR0yAgUklPcCoVlGyrixOrbci2pVVG-/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>394</td>
+  <td>Statistics – I</td>
+  <td><a href="https://drive.google.com/file/d/1RksWKUPzZ81sRm_R499pn5AJQXfJho-n/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>395</td>
+  <td>Statistics – II</td>
+  <td><a href="https://drive.google.com/file/d/1sgNECOFlgEZh6_5eDDSmEW86xhnbXrev/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>1339</td>
+  <td>Basics of Accounting</td>
+  <td><a href="https://drive.google.com/file/d/1BIVZEnfEuqRt7Qf30ZQymiL8COHowA72/view?usp=sharing">PDF</a></td>
+  
+</tr>
+<tr>
+  <td>1345</td>
+  <td>Principles of Commerce</td>
+  <td><a href="https://drive.google.com/file/d/1_tYBIPQK7GEnlSB6n2_9byRyPbfmzp-U/view?usp=sharing">PDF</a></td>
+ 
+</tr>
+<tr>
+  <td>1347</td>
+  <td>Commercial Geography</td>
+  <td>Wait</td>
+  
+</tr>
+<tr>
+  <td>1349</td>
+  <td>Introduction to Business Mathematics</td>
+  <td><a href="https://drive.google.com/file/d/1DWhoD4EErGmR564ukgf12oYlSs_-juR6/view?usp=sharing">PDF</a></td>
+  
+</tr>
+
+  
+  <tbody>
+  
+  </table>
+</div>
+</article>
+<div>
+</section>
+ <aside class="ads-widgets">
+            <!-- Right Section Content (Ads and Widgets) -->
+            <div class="ad">
+                <!-- Example Ad Content -->
+                Ad Content Here
+            </div>
+            <!-- Add more ads or widgets -->
+            <div class="widget">
+                <!-- Example Widget Content -->
+                Widget Content Here
+            </div>
+            <!-- Add more widgets -->
+        </aside>
+    </main>
+ <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+    </footer>
+
+
+</body>
+</html>

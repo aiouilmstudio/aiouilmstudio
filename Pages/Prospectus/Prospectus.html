@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+        .gradient-rectangle {
+            background: linear-gradient(to bottom, #00CDAC,#02AAB0);
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+       th, td {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    
+         font-size: 20px;
+}
+
+
+        th {
+            background-color: #02AAB0;
+        }
+
+        tr:hover {
+            background-color: #cc00cc;
+            transition: background-color 0.3s;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(to bottom,#02AAB0, #00CDAC);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button::before {
+            content: "";
+            background: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0.8);
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .download-button:hover {
+            transform: scale(1.05);
+        }
+
+        .download-button:hover::before {
+            transform: scale(1);
+        }
+.download-button a {
+text-decoration:none;
+color:white;
+}
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: large;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.back-button {
+  background-color: #02AAB0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00CDAC;
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="goBack()" class="back-button">Go Back</button>
+
+    <main>
+        <div class="heading1">
+            <h1 class="">AIOU ILM STUDIO</h1>     
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <div class="logo">
+                    <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+                </div>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#">Online Admission</a></li>
+                <li>
+                    <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                    <ul class="dropdown"> <!-- Dropdown Content -->
+                        <li><a href="#">Solved Assignments</a></li></ul>
+                        <li><a href="#">Guess Paper</a></li>
+                        <li><a href="#">Prospectus</a></li>
+                        <li><a href="#">Soft Books</a></li>
+                        <li><a href="#">Past Paper</a></li>
+                    
+                </li>
+            </ul>
+            <div class="right-nav">
+                <input type="text" id="search" placeholder="Search...">
+                <button class="btn">Search</button>
+            </div>
+        </nav>
+
+        <main class="container">
+            <section class="blog-content">
+                <div class="extreme-container">
+                    <article>
+
+  <div class="gradient-rectangle">
+    <h2 class="articles-h2">AIOU Prospectus 2023</h2>
+    
+    <p>Explore the comprehensive collection of AIOU Prospectus for Autumn 2023, offering detailed insights into various programs including Matric, FA/I com, ATTC/Imam & Khateeb, PGD Computer Science, BS (Face to Face), Msc/MBA/MS/MPhil/PhD (Face to Face), Language Certificates, and Diploma in Floriculture & Landscaping. Access the prospectuses for your desired programs and pave the way for a successful academic journey.</p>
+    <br>
+    <table >
+      <thead>
+        <tr>
+          <th>Programme</th>
+          <th>Prospectus Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Matric Programme</td>
+          <td>
+            <div class="download-button">
+              <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/Matric%20Autumn%202023.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>FA/I com Programme</td>
+          <td>
+            <div class="download-button">
+              <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/FA%20Autumn%202023.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>ATTC/Imam & Khateeb Programme</td>
+          <td>
+            <div class="download-button">
+              <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/ATTC-Imam.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </td>
+        </tr>
+        
+ 
+  
+  <tr>
+    <td>
+      
+    PGD Computer Science Programme
+     
+    </td>
+    <td>
+      <div class="download-button">
+      <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/PGD Computer Science.pdf" target="_blank" rel="noopener">Download</a> </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    
+      BS (Face to Face) Programme
+   
+    </td>
+    <td>
+      <div class="download-button">
+      <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/BS(F2F) (07082023).pdf" target="_blank" rel="noopener">Download</a> </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+     
+       Msc/MBA/MS/MPhil/PhD (Face to Face) Programme
+     
+    </td>
+    <td>
+      <div class="download-button">
+      <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/PhD-MS Final Prospectus for Autumn-2023 (20072023).pdf" target="_blank" rel="noopener">Download</a> </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+     
+        Language Certificates
+     
+    </td>
+    <td>
+      <div class="download-button">
+      <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/language certificates.pdf" target="_blank" rel="noopener">Download</a> </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    
+       Diploma in Floriculture &amp; Landscaping
+     
+    </td>
+    <td>
+      <div class="download-button">
+      <a href="https://online.aiou.edu.pk/LIVE_SITE/admission/prospectus/Autumn_2023/phase_i/Floriculture and landscape Brochure.pdf" target="_blank" rel="noopener">Download</a> </div>
+    </td>
+  </tr>
+      </tbody>
+    </table>
+  </div>
+
+</article>
+</div>
+</section>
+</section>
+<aside class="ads-widgets">
+    <!-- Right Section Content (Ads and Widgets) -->
+    <div class="ad">
+        <!-- Example Ad Content -->
+        Ad Content Here
+    </div>
+    <!-- Add more ads or widgets -->
+    <div class="widget">
+        <!-- Example Widget Content -->
+        Widget Content Here
+    </div>
+    <!-- Add more widgets -->
+</aside>
+</main>
+
+<footer>
+<!-- Footer content goes here -->
+<p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+</footer>
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+</script>
+</body>
+</html>
+

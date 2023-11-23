@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
+    
+</head>
+    <style>
+        .ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #4e54c8 0%, #8f94fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+a { text-decoration: none;}
+
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #02AAB0; /* Use the same color as the nav bar */
+    padding: 10px; /* Adding some padding for space */
+    border-radius: 0 10px 10px 0; /* Adding some rounded corners to match the design */
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for elegance */
+    outline: none; /* Remove default input outline */
+    margin-right: 10px; /* Add margin between search input and button */
+    background-color: #fff; /* White background for contrast */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #00CDAC; /* Use the secondary color from the nav bar */
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="heading1">
+        <h1 class="">AIOU ILM STUDIO</h1>     
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <div class="logo">
+                <a href="#"><img src="/Images/Logo.png" alt="ILM STUDIO Logo"></a>
+            </div>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#">Online Admission</a></li>
+            <li>
+                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                <ul class="dropdown"> <!-- Dropdown Content -->
+                    <li><a href="#">Solved Assignments</a></li></ul>
+                    <li><a href="#">Guess Paper</a></li>
+                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                    <li><a href="#">Soft Books</a></li>
+                    <li><a href="#">Past Paper</a></li>
+                
+            </li>
+        </ul>
+        <div class="right-nav">
+            <input type="text" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main class="container">
+        <section class="blog-content">
+            <div class="extreme-container">
+
+<article>
+                    <h2 class="articles-h2">1. Intermediate F.A I.Com Solved Assignments Spring 2023</h2>
+                    <p>Here is Complete List of All Programmes Offered by Allama Iqbal Open University and Their Solved Assignments for Semester Autumn 2023. 
+                        Here You Can Download AIOU Solved Assignments for Autumn 2023 for Free. 
+                        So keep Visiting and Download Solved Assignments of AIOU Autumn 2023.
+                    </p>
+
+
+
+<div class="matric-solved-assignments">
+  <table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Book Name</th>
+            <th>Assignments</th>
+        </tr>
+    </thead>
+  
+ <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>301</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Daftri Urdu (Office Urdu)</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/daftri-urdu-office-urdu-code-301-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>303</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Iqbaliat</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/iqbaliat-code-303-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>305</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Rural Development</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/rural-development-code-305-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>308</strong></td> <td style="height: 48px; width: 60.875%;"><strong>General Science</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/general-science-code-308-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>309</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Arabic</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>311</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Book Keeping and Accountancy</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/book-keeping-and-accountancy-code-311-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>312</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Education</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/education-code-312-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>313</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Dairy Farming</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/dairy-farming-code-313-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>315</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Economics</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/economics-code-315-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>316</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Islamiat Compulsory</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/islamiat-compulsory-code-316-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>317</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Pakistan Study</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/pakistan-study-code-317-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>319</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Ethics Compulsory</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/ethics-compulsory-code-319-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>321</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Muslim History of Sub-continent</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/muslim-history-of-sub-continent-code-321-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>322</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Secretarial Practice</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/secretarial-practice-code-322-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>326</strong></td> <td style="height: 48px; width: 60.875%;"><strong>نفع بخش زرعی کاروبار</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/%d9%86%d9%81%d8%b9-%d8%a8%d8%ae%d8%b4-%d8%b2%d8%b1%d8%b9%db%8c-%da%a9%d8%a7%d8%b1%d9%88%d8%a8%d8%a7%d8%b1-code-326-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>327</strong></td> <td style="height: 48px; width: 60.875%;"><strong>فارم مشینری اورزرعی آلات</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/%d9%81%d8%a7%d8%b1%d9%85-%d9%85%d8%b4%db%8c%d9%86%d8%b1%db%8c-%d8%a7%d9%88%d8%b1%d8%b2%d8%b1%d8%b9%db%8c-%d8%a2%d9%84%d8%a7%d8%aa-code-327-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>328</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Improved Methods Of Oil Seed Crops</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/improved-methods-of-oil-seed-crops-code-328-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>329</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Jadeed Zarat</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/jadeed-zarat-code-329-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>330</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Child Care and Development</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/child-care-and-development-code-330-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>342</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Improved Methods of Fruit Production</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/improved-methods-of-fruit-production-code-342-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>343</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Islamiat Elective</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/islamiat-elective-code-343-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>345</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Home Management and Home Furnishing</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/home-management-and-home-furnishing-code-345-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>346</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Principles of Commerce</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/principles-of-commerce-code-346-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>347</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Banking</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/banking-code-347-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>349</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Plant Protection</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/plant-protection-code-349-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>355</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Consumer Textile</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/consumer-textile-code-355-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>356</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Food &amp; Nutrition</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/food-nutrition-code-356-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>357</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Health &amp; Nutrition</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/health-nutrition-code-357-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>358</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Apparel Design</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/apparel-design-code-358-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>360</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Information Technology Applications</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/information-technology-applications-code-360-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>361</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Persian</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/persian-code-361-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>363</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Urdu-I</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/urdu-i-code-363-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>364</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Urdu-II</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/urdu-ii-code-364-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>365</strong></td> <td style="height: 48px; width: 60.875%;"><strong>فیملی اور کمیونٹی کی صحت</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/#">Waiting for Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>366</strong></td> <td style="height: 48px; width: 60.875%;"><strong>صحت کےلیےعملی اقدامات</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/%d8%b5%d8%ad%d8%aa-%da%a9%db%92%d9%84%db%8c%db%92%d8%b9%d9%85%d9%84%db%8c-%d8%a7%d9%82%d8%af%d8%a7%d9%85%d8%a7%d8%aa-code-366-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>371</strong></td> <td style="height: 48px; width: 60.875%;"><strong>خواتین پولیس</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>372</strong></td> <td style="height: 48px; width: 60.875%;"><strong>جرمیات</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/#">Waiting for Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>376</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Human Rights</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/human-rights-code-376-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>386</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Compulsory English-I</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/compulsory-english-i-code-386-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>387</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Compulsory English-II</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/compulsory-english-ii-code-387-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>388</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Penology</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>389</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Quran-e-Hakeem</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/quran-e-hakeem-code-389-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>394</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Statistics-I</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/statistics-i-code-394-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>395</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Statistics-II</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/statistics-ii-code-395-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1307</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Mathematics-I</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1308</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Mathematics-II</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/#">Waiting for Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1309</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Mathematics-III</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/#">Waiting for Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1339</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Basics of Accounting</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/basics-of-accounting-code-1339-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1340</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Business Accounting</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/business-accounting-code-1340-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1345</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Principles of Commerce</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/principles-of-commerce-code-1345-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1346</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Essentials of Commerce</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><b></b><b><strong><a href="/essentials-of-commerce-code-1346-assignments-of-spring-2023/">View Assignments</a></strong></b></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1347</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Commercial Geography</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/commercial-geography-code-1347-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1348</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Introduction to Economics</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/introduction-to-economics-code-1348-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 48px;"> <td style="height: 48px; width: 9.75%;"><strong>1349</strong></td> <td style="height: 48px; width: 60.875%;"><strong>Introduction to Business Math</strong></td> <td style="text-align: center; height: 48px; width: 29%;"><strong><a href="/introduction-to-business-math-code-1349-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> <tr style="height: 47px;"> <td style="height: 47px; width: 9.75%;"><strong>1350</strong></td> <td style="height: 47px; width: 60.875%;"><strong>Introduction to Business Statistics</strong></td> <td style="text-align: center; height: 47px; width: 29%;"><strong><a href="/introduction-to-business-statistics-code-1350-assignments-of-spring-2023/">View Assignments</a></strong></td> </tr> </tbody>
+    
+</table>
+</div>
+</article>
+<div>
+</section>
+ <aside class="ads-widgets">
+            <!-- Right Section Content (Ads and Widgets) -->
+            <div class="ad">
+                <!-- Example Ad Content -->
+                Ad Content Here
+            </div>
+            <!-- Add more ads or widgets -->
+            <div class="widget">
+                <!-- Example Widget Content -->
+                Widget Content Here
+            </div>
+            <!-- Add more widgets -->
+        </aside>
+    </main>
+ <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
+    </footer>
+</body>
+</html>
