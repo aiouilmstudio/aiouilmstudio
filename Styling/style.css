@@ -12,25 +12,6 @@ body {
     
 }
 
-/* Smaller devices */
-@media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    .nav-list li {
-        padding: 10px;
-        margin: 5px;
-        font-size: 14px;
-    }
-}
-
-    /* Larger devices */
-@media screen and (min-width: 1200px) {
-    /* Adjust styles for larger screens */
-    .nav-list li {
-        padding: 20px;
-        margin: 10px;
-        font-size: 16px;
-    }
-}
     
 a { text-decoration: none;}
 
@@ -432,4 +413,3 @@ td a {
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-
