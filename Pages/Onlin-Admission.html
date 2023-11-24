@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIOU Online Admission</title>
+    <meta name="google-adsense-account" content="ca-pub-7077030525223165">
+    <link rel="stylesheet" href="Styling/style.css">
+    <script src="Javascipt/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ILMSTUDIO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Reset some default styles */
@@ -133,10 +138,153 @@ p {
     text-align: center;
     font-weight: bold;
 }
+.nav-bar {
+
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+     
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+.nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
+}
+
+.nav-list li {
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #00CDAC;
+    margin: 50 5px; /* Add margin between list items */
+}
+
+.nav-list li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; /* Adjust padding as needed */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.nav-list li a:hover {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    background-size: 200% 100%;
+    color: white;
+    text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
+}
+
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
+}
+
 
     </style>
 </head>
-<body><br><br>
+<body>
+
+<nav class="nav-bar">
+        <ul class="nav-list">
+            <div class="logo">
+                <a href="https://aiouilmstudio.github.io/"><img src="Images/Logo.png" alt="ILM STUDIO Logo"></a>
+            </div>
+            <li><a href="https://aiouilmstudio.github.io/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="Pages/Onlin-Admission.html">Online Admission</a></li>
+            <li>
+                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
+                <ul class="dropdown"> <!-- Dropdown Content -->
+                    <li><a href="https://aiouilmstudio.github.io/">Solved Assignments</a></li>  </ul>
+                    <li><a href="Pages/Guess Paper/ba.html">Guess Paper</a></li>
+                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                    <li><a href="Pages/Soft Books/softbooks.html">Soft Books</a></li>
+                    <li><a href="#">Past Paper</a></li>
+              
+            </li>
+        </ul>
+        
+       
+        
+    </nav>
+<br><br>
 <main class="container">
         <section class="blog-content">
             <div class="extreme-container">
@@ -169,7 +317,7 @@ p {
 <br><br>
 
     <footer>
-        <p>&copy; 2023 AIOU Online Admission. All rights reserved.</p>
+        <p>&copy; 2023 AIOU Ilm Studio. All rights reserved.</p>
     </footer>
 
     
