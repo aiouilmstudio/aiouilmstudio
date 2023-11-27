@@ -49,31 +49,54 @@ a { text-decoration: none;}
 }
 
 
-..nav-list {
+.nav-list {
+    width: 80%;
     display: flex;
+    justify-content: center; /* Change justify-content to flex-start */
     align-items: center;
-    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* Remove padding from the entire list */
 }
 
 .nav-list li {
-    margin: 0 10px;
+    padding: 5px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+    margin: 50 5px; /* Add margin between list items */
 }
 
 .nav-list li a {
+    padding: 10px;
     text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 20px 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    padding: 20px 10px; /* Adjust padding as needed */
 }
+
+/* Rest of your CSS remains unchanged */
 
 .nav-list li a:hover {
     background: linear-gradient(to right, #ff00cc, #3333ff);
     background-size: 200% 100%;
     color: white;
     text-decoration: none;
+    animation: gradientAnimation 0.5s ease forwards;
+}
+
+/* Animation for the gradient transition */
+@keyframes gradientAnimation {
+    to {
+        background-position: right center;
+    }
 }
 
 /* Animation for the gradient transition */
