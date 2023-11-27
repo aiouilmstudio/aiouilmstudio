@@ -1,33 +1,455 @@
-/* Your existing CSS styles */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Media Query for screens larger than 1297px */
-@media screen and (max-width: 1297px) {
-    /* Adjustments for larger screens */
-    .nav-list {
-        width: 95%;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin: 50 5px;  /* Adjust the width for larger screens */
-        /* Add more specific styles for larger screens here */
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .heading1 h1 {
+        font-size: 32px; /* Adjust the font size as needed for 768px */
+        /* Other styles for the heading at this screen size */
     }
 
+    /* Navigation styles */
     .nav-bar {
-        width: 95%; /* Keeps the nav bar full width */
-        /* Add more specific styles for larger screens here */
+        flex-direction: column;
+        align-items: center;
+        background-color: #02AAB0;
     }
 
-    /* Add more styles for larger screens within this media query as needed */
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #02AAB0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .nav-list.show {
+        transform: translateY(0);
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    /* Other elements' styles for mobile view */
+    /* Adjust as needed for a better mobile experience */
+    .articles-h2 {
+        font-size: 24px;
+    }
+
+    .blog-content {
+        width: 60%;
+        padding: 5px;
+    }
+
+    .ads-widgets {
+        display: none; /* Hide ads and widgets on mobile */
+    }
+
+    /* Adjust other styles as needed for a mobile-friendly layout */
+
+
+    table {
+    font-size: 14px; /* Decrease font size for better readability on smaller screens */
+    }
+
+    th,
+    td {
+    padding: 8px 16px; /* Reduce padding for table cells */
+    font-size: 14px; /* Decrease font size for better readability */
+    }
+
+/* Button styles */
+.download-button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 12px; /* Decrease font size */
 }
+
+/* Download links container */
+.download-links {
+    justify-content: center; /* Center align items on smaller screens */
+    width: 100%; /* Occupy full width */
+}
+
+.download-link {
+    flex-basis: calc(50% - 6px); /* Two items per row with some gap */
+    max-width: calc(50% - 6px); /* Two items per row with some gap */
+    margin: 3px; /* Adjust margin */
+}
+
+.download-link h3 {
+    font-size: 16px; /* Increase heading font size */
+}
+
+.download-link a.button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Decrease font size */
+}
+
+/* Other adjustments for mobile view... */
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px; /* Decrease font size for better readability */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+/* Blog content styles */
 .blog-content {
-    width: 95%;
-    padding: 20px;
+    width: 100%; /* Adjust width to occupy full width on smaller screens */
+    padding: 10px; /* Decrease padding for better spacing */
 }
-ads-widgets {
-    width: 30%;
+
+/* Ads and widgets styles */
+.ads-widgets {
+    width: 30%; /* Adjust width to occupy full width on smaller screens */
+    padding: 10px; /* Decrease padding for better spacing */
+}
+
+/* Extreme container styles */
+.extreme-container {
+    padding: 10px; /* Decrease padding for better spacing */
+    /* Other styles remain the same */
+}
+
+/* Ad and widget styles */
+.ad,
+.widget {
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+    padding: 8px; /* Decrease padding for better spacing */
+}
+
+/* Other adjustments for mobile view... */
+}
+
+@media screen and (min-width: 769px) {
+    /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+    background-color: #f0f0f0; /* Set background color */
+    margin: 0;
+    padding: 0;
+    
+}
+
+    
+a { text-decoration: none;}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    background-color: #02AAB0;
+}
+
+
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 100px; /* Adjust the width of the logo image as needed */
+    margin-left: 0%;
+}
+
+
+.heading1 {
+    font-size: 28px; /* Set the font size for heading */
+    font-weight: 700; /* Set the font weight for heading */
+    color: #333; /* Set text color for heading */
+    margin-bottom: 10px; /* Add some space between logo and heading */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00CDAC;
+    min-width: 160px;
+    z-index: 10;
+    top: 100%; /* Position dropdown content below the main list item */
+    left: 0; /* Align dropdown content with the left side */
+}
+
+.nav-list li {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to create space for the dropdown */
+}
+
+.nav-list li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
     padding: 10px;
 }
-footer {
-    width: 1400px;
+
+.dropdown li:hover {
+    background-color: #02AAB0;
+    color: white;
 }
 
+
+
+.container {
+    display: flex;
+}
+.articles-h2 {
+
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite;
+}
+
+/* Animation keyframes for text gradient */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+
+}
+p {
+    text-align: center;
+    font-weight: bold;
+}
+.blog-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.ads-widgets {
+    width: 30%;
+    padding: 20px;
+}
+
+.extreme-container {
+    /* Apply extreme graphics and coding styles here */
+    /* Example styles (you can customize these) */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.ad, .widget {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 18px;
+    transform: translatez(0); /* Enable 3D rendering for better effect */
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Styling for tables */
+th, td {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #009fa5, #00CDAC);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+th {
+    background: #4e677d;
+    font-weight: bold;
+    color: #00CDAC; /* Change text color for th */
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f6;
+}
+
+tr:hover td {
+    background: #00856f;
+}
+
+/* Styling for the download button */
+.download-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00CDAC, #00999e);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-color: #02AAB0; /* Change button's background color */
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    background-color: #00CDAC; /* Change button's background color on hover */
+}
+
+
+  .download-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.download-icon i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #4e54c8 0%, #8f94fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td:hover .download-icon {
+    display: block;
+}
+
+.download-icon:hover {
+    transform: scale(1.2);
+}
+
+td span {
+    display: block;
+}
+
+td a {
+    text-decoration: none;
+}
+
+.download-links-container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Download links styles */
+.download-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: flex-start; /* Start at the beginning of the container */
+    gap: 3px;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Initially occupy full width */
+}
+
+.download-link {
+    flex: 0 0 auto; /* Make width fit content */
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    max-width: 70%;
+    box-sizing: border-box;
+}
+
+.download-link h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.download-link a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008080;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-link a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
