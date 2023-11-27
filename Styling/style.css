@@ -64,7 +64,7 @@ a { text-decoration: none;}
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #00CDAC;
+  
     margin: 50 5px; /* Add margin between list items */
 }
 
