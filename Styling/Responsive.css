@@ -1,0 +1,33 @@
+/* Your existing CSS styles */
+
+/* Media Query for screens larger than 1297px */
+@media screen and (max-width: 1297px) {
+    /* Adjustments for larger screens */
+    .nav-list {
+        width: 95%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 50 5px;  /* Adjust the width for larger screens */
+        /* Add more specific styles for larger screens here */
+    }
+
+    .nav-bar {
+        width: 95%; /* Keeps the nav bar full width */
+        /* Add more specific styles for larger screens here */
+    }
+
+    /* Add more styles for larger screens within this media query as needed */
+}
+.blog-content {
+    width: 95%;
+    padding: 20px;
+}
+ads-widgets {
+    width: 30%;
+    padding: 10px;
+}
+footer {
+    width: 1400px;
+}
+
