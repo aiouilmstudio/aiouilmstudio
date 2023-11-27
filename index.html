@@ -18,27 +18,26 @@
         <h1 class="">AIOU ILM STUDIO</h1>     
     </div>
     <nav class="nav-bar">
-        <ul class="nav-list">
-            <div class="logo">
-                <a href="https://aiouilmstudio.github.io/"><img src="Images/Logo.png" alt="ILM STUDIO Logo"></a>
-            </div>
-            <li><a href="https://aiouilmstudio.github.io/"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="Pages/Onlin-Admission.html">Online Admission</a></li>
-            <li>
-                <a href="#">Solutions &#9662;</a> <!-- Dropdown Trigger -->
-                <ul class="dropdown"> <!-- Dropdown Content -->
-                    <li><a href="https://aiouilmstudio.github.io/">Solved Assignments</a></li>  </ul>
-                    <li><a href="Pages/Guess Paper/ba.html">Guess Paper</a></li>
-                    <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
-                    <li><a href="Pages/Soft Books/softbooks.html">Soft Books</a></li>
-                    <li><a href="#">Past Paper</a></li>
+      <ul class="nav-list">
+          <li class="logo">
+              <a href="https://aiouilmstudio.github.io/"><img src="Images/Logo.png" alt="ILM STUDIO Logo"></a>
+          </li>
+          <li><a href="https://aiouilmstudio.github.io/"><i class="fas fa-home"></i> Home</a></li>
+          
+                  <li><a href="https://aiouilmstudio.github.io/">Solved Assignments</a></li>
+                  <li><a href="Pages/Guess Paper/ba.html">Guess Paper</a></li>
+                  <li><a href="Pages/Prospectus/Prospectus.html">Prospectus</a></li>
+                  <li><a href="Pages/Soft Books/softbooks.html">Soft Books</a></li>
+                  <li><a href="#">Past Paper</a></li>
               
-            </li>
-        </ul>
-        
-       
-        
-    </nav>
+          </li>
+      </ul>
+      <div class="mobile-menu-icon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+  </nav>
   
     
     <main class="container">
@@ -262,27 +261,30 @@
         <!-- Footer content goes here -->
         <p>&copy; AIOU ILM Studio . Designed by Haider Ali Anjum . All Rights Reserved</p>
     </footer>
-    <script>
-        // JavaScript functionality for search
-        document.querySelector('.btn').addEventListener('click', function() {
-            let searchInput = document.getElementById('search').value.toLowerCase(); // Get search input
-            let allContent = document.querySelectorAll('.content'); // Assuming content has class 'content'
+   <script>
+      const menuIcon = document.querySelector('.mobile-menu-icon');
+      const navList = document.querySelector('.nav-list');
     
-            allContent.forEach(function(content) {
-                let text = content.textContent.toLowerCase(); // Get content text in lowercase
-                if (text.includes(searchInput)) {
-                    content.style.display = 'block'; // Show content matching search
-                } else {
-                    content.style.display = 'none'; // Hide content not matching search
-                }
-            });
-    
-            // Apply animation
-            let searchBubble = document.querySelector('.search-bubble');
-            searchBubble.classList.remove('animate');
-            void searchBubble.offsetWidth; // Trigger reflow to restart animation
-            searchBubble.classList.add('animate');
-        });
+      menuIcon.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenuIcon.addEventListener('click', function() {
+        navList.classList.toggle('show');
+
+        setTimeout(function() {
+            navList.classList.remove('show');
+        }, 8000);
+    });
+});
+
+
+
+
     </script>
     
 
