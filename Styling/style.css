@@ -16,81 +16,64 @@ body {
 a { text-decoration: none;}
 
 .nav-bar {
-
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     background-color: #02AAB0;
 }
 
 
 
+
 .logo {
     margin-right: 20px;
-    display: flex;
-    align-items: center;
+}
+
+..mobile-menu-icon {
+    display: none;
+    cursor: pointer;
 }
 
 .logo img {
     max-height: 100px;
-    max-width: 100px;; /* Adjust the width of the logo image as needed */
+    max-width: 100px;
     margin-left: 0%;
-     
 }
 
-
 .heading1 {
-    font-size: 28px; /* Set the font size for heading */
-    font-weight: 700; /* Set the font weight for heading */
-    color: #333; /* Set text color for heading */
-    margin-bottom: 10px; /* Add some space between logo and heading */
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 
-
-
-
-.nav-list {
-    width: 100%;
+..nav-list {
     display: flex;
-    justify-content: center; /* Change justify-content to flex-start */
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 0; /* Remove padding from the entire list */
+    list-style: none;
 }
 
 .nav-list li {
-    padding: 5px 20px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  
-    margin: 50 5px; /* Add margin between list items */
+    margin: 0 10px;
 }
 
 .nav-list li a {
-    padding: 10px;
     text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 20px 10px; /* Adjust padding as needed */
+    padding: 20px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
-
-/* Rest of your CSS remains unchanged */
 
 .nav-list li a:hover {
     background: linear-gradient(to right, #ff00cc, #3333ff);
     background-size: 200% 100%;
     color: white;
     text-decoration: none;
-    animation: gradientAnimation 0.5s ease forwards;
 }
 
 /* Animation for the gradient transition */
@@ -102,22 +85,18 @@ a { text-decoration: none;}
 
 
 
-
-
-/* Dropdown Styles */
 .dropdown {
     display: none;
     position: absolute;
     background-color: #00CDAC;
     min-width: 160px;
     z-index: 10;
-    top: 100%; /* Position dropdown content below the main list item */
-    left: 0; /* Align dropdown content with the left side */
+    top: 100%;
+    left: 0;
 }
 
 .nav-list li {
     position: relative;
-    padding-bottom: 10px; /* Add padding to create space for the dropdown */
 }
 
 .nav-list li:hover .dropdown {
@@ -125,7 +104,6 @@ a { text-decoration: none;}
 }
 
 .dropdown li {
-    display: block;
     padding: 10px;
 }
 
@@ -133,7 +111,6 @@ a { text-decoration: none;}
     background-color: #02AAB0;
     color: white;
 }
-
 
 
 .container {
@@ -305,14 +282,15 @@ td a {
     box-sizing: border-box;
 }
 
+/* Download links styles */
 .download-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: flex-start; /* Start at the beginning of the container */
+    gap: 3px;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 100%; /* Initially occupy full width */
 }
 
 .download-link {
@@ -322,7 +300,7 @@ td a {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     margin: 5px;
-    max-width: 100%;
+    max-width: 70%;
     box-sizing: border-box;
 }
 
@@ -348,3 +326,5 @@ td a {
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+
