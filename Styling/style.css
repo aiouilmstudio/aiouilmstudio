@@ -139,8 +139,20 @@ a { text-decoration: none;}
 .container {
     display: flex;
 }
-.articles-h2 {
 
+h1
+{font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ff9900, #ff3300); /* Gradient background */
+    color: transparent;
+    -webkit-background-clip: text; /* Clip text to the background shape */
+    background-clip: text;
+    animation: textGradient 5s linear infinite; /* Animation for text gradient */
+    -webkit-animation: textGradient 5s linear infinite; }
+    
+.articles-h2 {
     font-size: 36px;
     text-align: center;
     font-weight: bold;
